@@ -6,3 +6,6 @@ npm run test
 
 # Builds a production version of the application
 npm run build
+
+# Running the Dev Dockerfile
+docker build -f Dockerfile.dev
