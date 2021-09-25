@@ -12,7 +12,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1>Hello</h1>
+                <h1>Bye there! He</h1>
                 <DatePicker onChange={ (date) => console.log(date)}/>
                 <Button type="primary" style={{ marginLeft: 8}} onClick={() => console.log(getWeek(new Date()))}>
                     Book
