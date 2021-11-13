@@ -36,10 +36,28 @@ docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 19e9ae604ac011145ef6
 # Solution
 https://stackoverflow.com/questions/60790696/react-scripts-start-exiting-in-docker-foreground-cmd
 
-# 
-Add stdin_open property to your docker-compose.yml file
+# Add stdin_open property to your docker-compose.yml file
     web:
     stdin_open: true
 
 # Make sure you rebuild your containers after making this change with  
 docker-compose down && docker-compose up --build
+
+# list the containers
+docker ps -a -q
+
+# remove container
+docker rm -vf $(docker ps -a -q)
+
+#
+docker images -a -q
+docker rmi -f $(docker images -a -q)
+
+#
+docker volume ls -q
+docker volume rm $(docker volume ls -q)
+
+
+# docker-compose up error
+# docker-compose --version error 
+https://stackoverflow.com/questions/42139982/version-in-docker-compose-yml-is-unsupported-you-might-be-seeing-this-error

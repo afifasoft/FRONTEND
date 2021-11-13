@@ -1,0 +1,1 @@
+// A reducer helps us to centeralize the state management logic
