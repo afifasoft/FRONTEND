@@ -1,37 +1,18 @@
-import React, { Component, useState, Fragment} from 'react';
-import { Button, DatePicker }  from 'antd';
-
-import { getWeek } from '../utils/date-wrangler';
-import BookingsPage from '../components/Bookings/BookingsPage';
+import React from 'react';
 
 import '../App.css';
+import WeekPicker from './Bookings/WeekPicker';
 
-class App extends Component {
-    
+export default function App()  {
 
-    render() {
-        
-       
         return (
-           
-           <div>
-           <div>
-                <h1>Bye there! He</h1>
-                <DatePicker onChange={ (date) => console.log(date)}/>
-                <Button type="primary" style={{ marginLeft: 8}} onClick={() => console.log(getWeek(new Date()))}>
-                    Book 
-                </Button>
-                <Button type="primary" style={{ marginLeft: 8}} onClick={() => console.log(getWeek(new Date(), 7))}>
-                    GetWeek
-                </Button>
-            </div>
-            <div>
-                <BookingsPage/>
-            </div>
-            </div>
+            <main>
+                <p>Booking!</p>  
+               {WeekPicker} 
+            </main>
+            
         );
         
-    }
+    
 }
 
-export default App;

@@ -1,5 +1,4 @@
-// 82 / 86
-// The getWeek function uses the getDay
+// 85 / 89 4.4 Reviewing some useReducer concepts
 
 export function addDays (date, daysToAdd) {
     const clone = new Date(date.getTime());

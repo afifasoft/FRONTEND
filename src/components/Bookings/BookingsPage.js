@@ -1,16 +1,14 @@
-import React, { Component, Fragment } from "react";
-import WeekPicker from "./WeekPicker";
+import React from "react";
 
-class   BookingsPage extends Component {
-   render () {
+export  default function BookingsPage() {
+   
     return (
-        <Fragment>
+        
         <div>
-            <WeekPicker date={new Date()}/>
+            <p>Bookings!</p>
+           
         </div>
-        </Fragment>
-    );
-   }
+     );
+   
 }
 
-export default BookingsPage;
